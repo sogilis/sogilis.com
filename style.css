@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+@media (max-width: 800px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+h1, h2 {
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  font-variant: small-caps;
+  text-shadow: 0 1px 1px #333;
+}
+
+p, li {
+  line-height: 1.5rem;
+}
+
+.page-header {
+  height: 100px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  text-align: center;
+
+  border-bottom: 2px solid #eee;
+}
+.page-header .logo {
+  height: 80px;
+}
+
+.container {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.section-title {
+  margin-top: -20px;
+  margin-bottom: -20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  color: #fff;
+
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.section.intro {
+  padding-top: 400px;
+
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(http://sogilis.com/wp-content/uploads/2016/04/0.Haut_page.jpg);
+}
+.section.intro .link-call-to-action {
+  margin-top: 20px;
+}
+@media (max-width: 800px) {
+  .section.intro {
+    padding-top: 175px;
+  }
+}
+
+.section.company {
+  color: #fff;
+
+  background-color: #146977;
+}
+a {
+  color: #75C0C7;
+
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.section.frieze {
+  height: 200px;
+
+  border-top: 10px solid #111;
+  background-color: #111;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(http://sogilis.com/wp-content/uploads/2016/04/Recrutement_IMG-tech-01.svg);
+}
+@media (max-width: 600px) {
+  .section.frieze {
+    height: 115px;
+  }
+}
+
+.section.job {
+  color: #fff;
+
+  background-color: #EC6738;
+}
+
+.section.contact {
+  background-position: center -100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(http://sogilis.com/wp-content/uploads/2016/04/1.Bas_page-1.png);
+}
+.section.contact .section-title {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+@media (max-width: 800px) {
+  .section.contact {
+    background-position: center top;
+  }
+}
+
+.link-call-to-action {
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+
+  border: 2px solid #75C0C7;
+  border-radius: 3px;
+}
+.link-call-to-action:hover {
+  color: #000;
+  text-decoration: none;
+
+  background-color: #75C0C7;
+}
+@media (max-width: 800px) {
+  .link-call-to-action {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    text-align: center;
+  }
+}
