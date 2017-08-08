@@ -1,0 +1,291 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+@media (max-width: 800px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+h1, h2 {
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  font-variant: small-caps;
+}
+
+p, li {
+  line-height: 1.5rem;
+}
+
+a {
+  color: #75C0C7;
+
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.link-call-to-action {
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+
+  border: 2px solid #75C0C7;
+  border-radius: 3px;
+}
+.link-call-to-action:hover {
+  color: #000;
+  text-decoration: none;
+
+  background-color: #75C0C7;
+}
+@media (max-width: 800px) {
+  .link-call-to-action {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    text-align: center;
+  }
+}
+
+.page-header {
+  height: 90px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  font-size: 1.2rem;
+
+  border-bottom: 2px solid #eee;
+}
+.page-header .container {
+  display: flex;
+  width: 100%;
+
+  align-items: center;
+}
+.page-header .logo {
+  height: 70px;
+}
+.page-header .page-header-separator {
+  flex-grow: 1;
+}
+.page-header a {
+  margin-left: 25px;
+  margin-right: 25px;
+  color: #146977;
+}
+.page-header .link-call-to-action {
+  border-color: #146977;
+}
+.page-header .link-call-to-action:hover {
+  color: #fff;
+  background-color: #146977;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.section-title {
+  margin-top: -20px;
+  margin-bottom: -20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  color: #fff;
+
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.row {
+  display: flex;
+}
+.row > .col-3 {
+  width: 25%;
+}
+.row > .col-4 {
+  width: 33%;
+}
+.row > .col-6 {
+  width: 50%;
+}
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .row > .col-3,
+  .row > .col-4,
+  .row > .col-6 {
+    width: 100%;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+}
+
+.card {
+  max-width: 400px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 36px;
+  padding: 0 15px 25px;
+
+  border: 1px solid #75C0C7;
+  border-radius: 5px;
+}
+.card h3 {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  justify-content: center;
+  text-align: center;
+}
+.card ul {
+  padding-left: 18px;
+}
+
+.section.intro {
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(http://sogilis.com/wp-content/uploads/2016/04/0.Haut_page2.jpg);
+}
+.section.intro .section-title {
+  padding-top: 150px;
+  padding-bottom: 150px;
+
+  color: #146977;
+  text-align: center;
+  font-size: 1.3rem;
+
+  background-color: transparent;
+}
+
+.section.what {
+  padding-top: 36px;
+  padding-bottom: 0;
+
+  color: #fff;
+
+  background-color: #146977;
+}
+.section.what h2 {
+  margin-bottom: 36px;
+}
+.section.what .center {
+  padding: 0 0 30px;
+
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.section.frieze {
+  height: 300px;
+
+  background-color: #111;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.section.frieze.oiseau {
+  background-image: url(http://sogilis.com/wp-content/uploads/2016/04/Sogilis_OiseauTech.svg);
+}
+.section.frieze.people {
+  height: 250px;
+  border-top: 10px solid #111;
+
+  background-image: url(http://sogilis.com/wp-content/uploads/2016/04/Recrutement_IMG-tech-01.svg);
+}
+@media (max-width: 600px) {
+  .section.frieze {
+    height: 115px;
+  }
+}
+
+.section.how-why {
+  padding-top: 36px;
+
+  color: #146977;
+}
+.section.how-why h2 {
+  margin-bottom: 36px;
+  text-align: center;
+}
+.section.how-why .card {
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+}
+
+.section.recrutement {
+  padding-top: 72px;
+  padding-bottom: 72px;
+
+  color: #fff;
+  text-align: center;
+  font-size: 1.4rem;
+
+  background-color: #EC6738;
+}
+.section.recrutement p {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section.recrutement .link-call-to-action {
+  color: #fff;
+  border-color: #fff;
+}
+.section.recrutement .link-call-to-action:hover {
+  color: #EC6738;
+  background-color: #fff;
+}
+
+.page-footer {
+  padding-top: 36px;
+
+  color: #146977;
+
+  border-top: 20px solid #111;
+}
+.page-footer .motto {
+  color: #666;
+}
+.page-footer ul {
+  list-style: none;
+}
+.page-footer li {
+  line-height: 2.5rem;
+}
+.page-footer a {
+  color: #146977;
+}
+.page-footer .fa {
+  padding: 10px;
+
+  font-size: 3rem;
+}
