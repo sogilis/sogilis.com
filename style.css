@@ -309,3 +309,23 @@ a:hover {
     text-align: center;
   }
 }
+
+.game {
+  float: right;
+  cursor: pointer;
+  text-align: center;
+}
+
+.game:hover > .game-img {
+  background-color: #146977;
+}
+
+.game-title {
+  display: block;
+  visibility: hidden;
+}
+
+.game:hover > .game-title {
+  visibility: visible;
+}
+
