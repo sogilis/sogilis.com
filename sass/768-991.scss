@@ -39,7 +39,7 @@ $dark_blue:#00446C;
 $wolf-blue:#016099;
 $medium-blue:#4EB2DD;
 $light-electric-blue:#A7E4EA;
-
+$light-grey-blue:#EDF5F5;
 
 
 //TYPOS
@@ -1759,7 +1759,7 @@ textarea:focus{
 /**********************************************************************************************************************************************************/
 
 .content_purpose_1{
-	padding-top:200px; 
+	padding-top:100px; 
 
 	.title_level_1{
 		font-size:2.3em;
@@ -1801,12 +1801,9 @@ textarea:focus{
 }
 
 .content_purpose_2{
-	background-color:$light-electric-blue;
-	box-shadow:0 0 19px 0px rgba(0, 0, 0, 0.1);
-	moz-box-shadow:0 0 19px 0px rgba(0, 0, 0, 0.1);
-	webkit-box-shadow:0 0 19px 0px rgba(0, 0, 0, 0.1);
-	padding-top:60px;
-	padding-bottom:50px;
+	background-color:$light-grey-blue;
+	padding-top:20px;
+	padding-bottom:20px;
 	margin-bottom:80px;
 	margin-top:80px;
 
@@ -1819,6 +1816,13 @@ textarea:focus{
 		margin-top:30px;
 		font-size:0.8em;
 		font-weight:400;
+	}
+	.centre{
+		text-align: center;
+		text-align-last: center;
+	}
+	h1{
+		font-size: 2em;
 	}
 	.title_zone{
 		font-size:1.5em;
@@ -1974,6 +1978,14 @@ textarea:focus{
 	}
 }
 
+.quote_purpose{
+	h1{
+		font-size:1.5em;
+		padding-top:2em;
+		text-align: justify;
+		text-align-last: center;
+	}
+}
 
 /**********************************************************************************************************************************************************/
 /* CLOUD NATIVE PAGE */
