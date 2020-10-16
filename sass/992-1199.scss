@@ -39,7 +39,7 @@ $dark_blue:#00446C;
 $wolf-blue:#016099;
 $medium-blue:#4EB2DD;
 $light-electric-blue:#A7E4EA;
-
+$light-grey-blue:#EDF5F5;
 
 
 //TYPOS
@@ -169,7 +169,7 @@ $light-electric-blue:#A7E4EA;
 			background-color: #A7E4EA;
 			position: absolute;
 			margin-top: -36px;
-			margin-left: 201px;
+			margin-left: 265px;
 			z-index: -1;
 			-webkit-transition: all 0.3s;
 			-moz-transition: all 0.3s;
@@ -185,7 +185,7 @@ $light-electric-blue:#A7E4EA;
 			background-color: #A7E4EA;
 			position: absolute;
 			margin-top: -36px;
-			margin-left: 291px;
+			margin-left: 355px;
 			z-index: -1;
 			-webkit-transition: all 0.3s;
 			-moz-transition: all 0.3s;
@@ -225,6 +225,10 @@ $light-electric-blue:#A7E4EA;
 
 		.dropdown-content a:hover:before{
 			width:50px;
+		}
+
+		.dropdown-content-company:before {
+			margin-left: 150px !important;
 		}
 
 		.dropbtn{ 
@@ -1361,6 +1365,7 @@ textarea:focus{
 .about_zone_2{
 
 	margin-top:100px;
+	margin-bottom: 4em;
 
 	.chiffre_1{
 		h1{
@@ -1718,7 +1723,7 @@ textarea:focus{
 /**********************************************************************************************************************************************************/
 
 .content_purpose_1{
-	padding-top:200px; 
+	padding-top:100px; 
 
 	.title_level_1{
 		font-size:2.8em;
@@ -1756,19 +1761,25 @@ textarea:focus{
 }
 
 .content_purpose_2{
-	background-color:$light-electric-blue;
-	box-shadow:0 0 19px 0px rgba(0, 0, 0, 0.1);
-	moz-box-shadow:0 0 19px 0px rgba(0, 0, 0, 0.1);
-	webkit-box-shadow:0 0 19px 0px rgba(0, 0, 0, 0.1);
-	padding-top:60px;
-	padding-bottom:50px;
+	background-color:$light-grey-blue;
+	padding-top:20px;
+	padding-bottom:20px;
 	margin-bottom:80px;
 	margin-top:80px;
 
 	p, h1{
 		color:$wolf-blue;
 	}
+	.centre{
+		text-align: center;
+		text-align-last: center;
+		font-family: 'EB-Garamond', serif;
 
+	}
+	h1{
+		font-size: 2em;
+		font-family: 'EB-Garamond', serif;
+	}
 	p{
 		margin-left:30px;
 		margin-top:30px;
@@ -1847,10 +1858,16 @@ textarea:focus{
 		font-size:0.8em;
 		margin-left:55px;
 		font-weight:400;
-		list-style: url(../img/puce_liste.svg);
+		list-style: disc;
 
 		li{
 			margin-top:20px;
+		}
+	}
+
+	&__image {
+		img {
+			width: 100%;	
 		}
 	}
 
@@ -1914,7 +1931,15 @@ textarea:focus{
 	}
 }
 
-
+.quote_purpose{
+	h1{
+		font-size:1.5em;
+		padding-top:3em;
+		text-align: justify;
+		text-align-last: center;
+		font-family: 'EB-Garamond', serif;
+	}
+}
 /**********************************************************************************************************************************************************/
 /* CLOUD NATIVE PAGE */
 /**********************************************************************************************************************************************************/
