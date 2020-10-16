@@ -170,7 +170,7 @@ $light-grey-blue:#EDF5F5;
 			background-color: #A7E4EA;
 			position: absolute;
 			margin-top: -36px;
-			margin-left: 251px;
+			margin-left: 330px;
 			z-index: -1;
 			-webkit-transition: all 0.3s;
 			-moz-transition: all 0.3s;
@@ -186,7 +186,7 @@ $light-grey-blue:#EDF5F5;
 			background-color: #A7E4EA;
 			position: absolute;
 			margin-top: -36px;
-			margin-left: 371px;
+			margin-left: 455px;
 			z-index: -1;
 			-webkit-transition: all 0.3s;
 			-moz-transition: all 0.3s;
@@ -226,6 +226,10 @@ $light-grey-blue:#EDF5F5;
 
 		.dropdown-content a:hover:before{
 			width:50px;
+		}
+
+		.dropdown-content-company:before {
+			margin-left: 150px !important;
 		}
 
 		.dropbtn{ 
