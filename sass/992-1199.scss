@@ -1805,6 +1805,8 @@ textarea:focus{
 }
 
 .content_purpose_3{
+	padding-bottom: 1.875em;
+	
 	.purpose {
 		margin-left: 30px;
 	}
@@ -2303,4 +2305,8 @@ textarea:focus{
 		margin-bottom: 10px;
 		width: 100px;
 	}
+}
+
+.content_purpose_1__img {
+	width: 100%;
 }
