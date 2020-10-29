@@ -17,9 +17,11 @@
         <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css">
         <link rel="stylesheet" href="stylesheets/aos.css" />
 
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
         <script src="js/aos.js"></script>
         <script src="js/js.cookie.js" charset="utf-8" type="text/javascript"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
         <link rel="icon" type="image/png" href="img/favicon.png"/>
     </head>
@@ -65,20 +67,67 @@
                     <div class="title_level_1">Let's keep in touch</div>
                     <div class="col-12 col-md-10 col-lg-8  offset-lg-2">
                         <p class="text_montserrat">An idea, a project, a problem? <br>We are here to listen to you to find the perfect solution.</p>
-
-                        <form method="POST" action="https://formspree.io/nicolas@sogilis.com">
-                            <input type="email" name="email" placeholder="Your email">
-                            <textarea name="message" placeholder="Your message"></textarea>
-                            <button type="submit" class="btn_dark_grey">Send message
+                        <form id="formulaire">
+                            <input type="email" name="email" placeholder="Your email*" required>
+                            <textarea name="message" placeholder="Your message*" required></textarea>
+                            <div class="contact__captcha-container">
+                                <div class="g-recaptcha" data-sitekey="6Ld5WdwZAAAAAMgQiI_wqvTChkK5FIPZOvjaLyd8"></div>
+                                <span class="contact__required" id="captcha-error">
+                                    Please, prove that you are not a robot
+                            </span>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 text_description">
+                                    * Mandatory fields
+                                </div>
+                            </div>
+                            <button type="submit" class="btn_dark_grey">Envoyer le message
                                 <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                 viewBox="0 0 7.5 10.3" style="enable-background:new 0 0 7.5 10.3;" xml:space="preserve">
+                                     viewBox="0 0 7.5 10.3" style="enable-background:new 0 0 7.5 10.3;" xml:space="preserve">
                                 <style type="text/css">
                                     .st0{fill:none;stroke-width:3;}
                                 </style>
-                                <path id="Tracé_16" class="st0" d="M1.2,9.2l4.1-4.1L1.1,1.2"/>
+                                    <path id="Tracé_16" class="st0" d="M1.2,9.2l4.1-4.1L1.1,1.2"/>
                                 </svg>
-                        </button>
+                            </button>
                         </form>
+                        <div
+                                class="
+                                alert
+                                alert-success
+                                d-none
+                                container-application__success
+                              "
+                                id="success"
+                                role="alert"
+                        >
+                            Your message has been processed by our services, we will get back to you as soon as possible
+                        </div>
+                        <div
+                                class="
+                                alert
+                                alert-danger
+                                d-none
+                                container-application__failure
+                              "
+                                id="failure"
+                                role="alert"
+                        >
+                          Something went wrong... Please send you message to contact@sogilis.com
+                        </div>
+<!--                        <form method="POST" action="https://formspree.io/nicolas@sogilis.com">-->
+<!--                            <input type="email" name="email" placeholder="Your email">-->
+<!--                            <textarea name="message" placeholder="Your message"></textarea>-->
+<!--                            <button type="submit" class="btn_dark_grey">Send message-->
+<!--                                <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"-->
+<!--                                 viewBox="0 0 7.5 10.3" style="enable-background:new 0 0 7.5 10.3;" xml:space="preserve">-->
+<!--                                <style type="text/css">-->
+<!--                                    .st0{fill:none;stroke-width:3;}-->
+<!--                                </style>-->
+<!--                                <path id="Tracé_16" class="st0" d="M1.2,9.2l4.1-4.1L1.1,1.2"/>-->
+<!--                                </svg>-->
+<!--                        </button>-->
+<!--                        </form>-->
                     </div>
                 </div>
 
@@ -347,6 +396,40 @@
                     header.removeClass("content-menu-mobile_scroll").addClass('content-menu-mobile');
                 }
             });
+        });
+
+        function isCaptchaOk() {
+            const captchaResponse = grecaptcha.getResponse();
+            const isCaptchaOk = captchaResponse.length !== 0;
+
+            if(!isCaptchaOk) {
+                document.getElementById("captcha-error").style = "display: block";
+            } else {
+                document.getElementById("captcha-error").style = "display: none";
+            }
+
+            return isCaptchaOk;
+        }
+
+        $('#formulaire').submit(function(e) {
+            e.preventDefault();
+
+            const data = {
+                email: $("#formulaire input[type=email]").val(),
+                message: $("#formulaire textarea").val(),
+                "g-recaptcha-response": grecaptcha.getResponse(),
+            };
+
+            const url = "https://formspree.io/f/myybjzbz";
+
+            if(isCaptchaOk()) {
+                axios.post(url, data)
+                        .then(function (response) {
+                            document.getElementById("success").classList.remove("d-none");
+                        }).catch(function (error) {
+                    document.getElementById("failure").classList.remove("d-none");
+                });
+            }
         });
     </script>
 
