@@ -23,7 +23,8 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
         <script src="js/aos.js"></script>
-        <script src="js/js.cookie.js" charset="utf-8" type="text/javascript"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/tarteaucitronjs/tarteaucitron.js"> </script>
 
         <link rel="icon" type="image/png" href="img/favicon.png"/>
     </head>
@@ -459,12 +460,22 @@
                         <div class="trait_gris_clair"></div>
                     </div>
                 </div>
-                <div class="row subfooter  justify-content-between">
-                    <div class="col-9 col-sm-8 col-md-4 col-lg-4">
-                        <p class="text_description">Sogilis - All right reserved - 2020</p>
+                <div class="row subfooter  justify-content-sm-between flex-column flex-sm-row">
+                    <div>
+                        <a
+                            href="#"
+                            style="float: unset;"
+                            onclick='tarteaucitron.userInterface.openPanel();'
+                            >Cookies management</a>
                     </div>
-                    <div class="col-2 col-sm-3 col-md-2 col-lg-1">
-                        <a href="https://sogilis.fr/mentions-legal.html">Legal</a>
+                    <div>
+                        <a
+                            style="float: unset;"
+                            href="https://sogilis.fr/mentions-legal.html"
+                        >Legal</a>
+                    </div>
+                    <div>
+                        <p class="text_description">Sogilis - All right reserved - 2021</p>
                     </div>
                 </div>
             </div>
@@ -564,6 +575,7 @@
         AOS.init();
     </script>
 
+    <script src="./js/scripts.js"> </script>
 
     </body>
 </html>
