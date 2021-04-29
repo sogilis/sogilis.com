@@ -215,7 +215,7 @@ tarteaucitron.services.gtagCustom = {
              * https:// developers.google.com/analytics/devguides/collection/gtagjs/cross-domain
              */
             linker: {
-              domains: ['blog.sogilis.fr', 'sogilis.fr', 'sogilis.com'],
+              domains: ['blog.sogilis.fr', 'sogilis.com'],
             },
           }
         );
