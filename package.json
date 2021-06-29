@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "compass:compile": "cd './docs/fr' && compass compile",
+    "compass:watch": "cd './docs/fr' && compass watch",
+    "anywhere:run:": "anywhere -h localhost -d './docs'",
+    "browser-sync:run": "browser-sync start --server --watch --serveStatic './docs'",
+    "start": "run-p compass:compile anywhere:run",
+    "dev": "run-p compass:watch browser-sync:run"
+  },
+  "devDependencies": {
+    "anywhere": "^1.5.0",
+    "browser-sync": "^2.27.3",
+    "npm-run-all": "^4.1.5"
+  }
+}
