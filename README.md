@@ -9,7 +9,7 @@
 
 We serve `docs` on GitHub Pages. It's the only solution available (see also [this link](https://stackoverflow.com/questions/42469817/host-github-pages-from-dist-folder-in-master-branch))
 
-Currently (2021/06) [./en](./en) is deprecated. We serve only French Website.
+Currently (2021/06) [./old_english_website](./old_english_website) is deprecated. We serve only French Website.
 
 ## Quick start dev
 
