@@ -1,9 +1,7 @@
 * [sogilis.com](#sogiliscom)
     * [Quick start dev](#quick-start-dev)
     * [Stylesheet](#stylesheet)
-        * [compass](#compass)
-            * [Install compass](#install-compass)
-        * [Run compass:](#run-compass)
+        * [Compile stylesheet](#compile-stylesheet)
 
 # sogilis.com
 
@@ -13,40 +11,25 @@ Currently (2021/06) [./old_english_website](./old_english_website) is deprecated
 
 ## Quick start dev
 
-If `compass` is correctly installed and in the `PATH`, run
-
 ```sh
-yarn start
+yarn dev
 ```
 
 You will have hot reload when any files under [./docs](./docs) will be changed.
 
+
 ## Stylesheet
 
-- Sass files: [./docs/fr/sass](./docs/fr/sass)
-- Compiled css files: [./docs/fr/stylesheets](./docs/fr/stylesheets)
+Style of header and footer could not be changed easy. They are compiled from
+https://github.com/sogilis/Blog/tree/master/site/themes/sogilis/assets/css
 
-### compass
+All stylesheets should be write again.
 
-For now, the sass files are compiled via `compass`. We will change this soon.
+### Compile stylesheet
 
-#### Install compass
+Run
 
 ```sh
-sudo gem update --system && sudo gem install compass
+yarn sass:compile
 ```
 
-(add `-n /usr/local/bin` on MacOS)
-
-### Run compass:
-
-- Compile Sass stylesheets to CSS
-
-  ```sh
-  cd ./docs/fr && compass compile
-  ```
-
-- Compile Sass stylesheets to CSS when they change
-  ```sh
-  cd ./docs/fr && compass watch
-  ```
