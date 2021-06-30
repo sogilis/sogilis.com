@@ -172,4 +172,19 @@
       }
     }
   }
+
+  .nous-rejoindre__job-list {
+    list-style-type: disc;
+    margin-left: 4rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight:600;
+
+    li {
+      margin-bottom: 1rem;
+      a {
+        color:$medium-grey;
+      }
+    }
+  }
+
 }
