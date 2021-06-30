@@ -142,5 +142,17 @@
     padding-left: 5.5em;
   }
 }
+.nous-rejoindre .nous-rejoindre__job-list {
+  list-style-type: disc;
+  margin-left: 4rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+.nous-rejoindre .nous-rejoindre__job-list li {
+  margin-bottom: 1rem;
+}
+.nous-rejoindre .nous-rejoindre__job-list li a {
+  color: #707070;
+}
 
 /*# sourceMappingURL=nous-rejoindre.css.map */
